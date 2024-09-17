@@ -139,7 +139,7 @@ def main():
         - The Isolation Forest can detect these anomalies based on multiple factors (like latency, time of day, and day of the week).
         """)
 
-    if st.button("Train Model"):
+    if st.button("Select your Approach - Stats vs Model"):
         if model_choice == "Z-Score (Statistical)":
             st.subheader("Anomaly Detection Using Z-Score")
             df = z_score_anomaly_detection(df, 'latency')
