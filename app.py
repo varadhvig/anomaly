@@ -106,7 +106,7 @@ def main():
 
     # Step 4: Model Selection
     st.header("4. Choose Anomaly Detection Method")
-    model_choice = st.selectbox("Select a model", ("Z-Score (Statistical)", "Isolation Forest (Machine Learning)"))
+    model_choice = st.selectbox("Select a Stat or a Model", ("Z-Score (Statistical)", "Isolation Forest (Machine Learning)"))
 
     # Explanation for Z-Score
     if model_choice == "Z-Score (Statistical)":
@@ -139,7 +139,7 @@ def main():
         - The Isolation Forest can detect these anomalies based on multiple factors (like latency, time of day, and day of the week).
         """)
 
-    if st.button("Select your Approach - Stats vs Model"):
+    if st.button("Run"):
         if model_choice == "Z-Score (Statistical)":
             st.subheader("Anomaly Detection Using Z-Score")
             df = z_score_anomaly_detection(df, 'latency')
